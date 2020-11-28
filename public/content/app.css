@@ -1,0 +1,59 @@
+/*Custom Css goes here*/
+
+body {
+padding-bottom: 100px;
+}
+div.row {
+    margin: auto;
+    width: 85%; 
+}
+
+/*Survey Table starts*/
+.surveyTable {
+    width: 100%;
+    border: none;
+    border-collapse:separate; 
+}
+tr:hover {color:white;background-color:#db2f2f;}
+thead .thead-dark{background-color:#F7DAE6; padding: 10px 10px;}
+thead .thead-dark:hover{background-color:#db2f2f;}
+tr:nth-child(even) {background-color: #F7DAE6;}
+tr:nth-child(even):hover{color:white;background-color:#db2f2f;}
+
+#tableRows .title {
+    display: inline-block;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: none;
+    color: black;
+    padding: 5px 5px;
+    font-size: 18px;
+}
+#tableRows .titleCol:hover{
+color: white;
+}
+#tableRows .title:hover{
+    display: inline-block;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: none;
+    color: white;
+    padding: 5px 5px;
+    font-size: 18px;
+}
+
+/*Survey Table ends*/
+
+/*Card for Registeration and Login starts*/
+.card {
+  box-shadow: 0 4px 8px 0 rgba(117, 39, 39, 0.2);
+  transition: 0.3s;
+  padding: 20px;
+  border-radius: 10px;
+}
+.card:hover {
+    box-shadow: 0 14px 24px 0 rgba(117, 39, 39, 0.2);
+  }
+/*Card for Registeration and Login ends*/
+
+
+
+

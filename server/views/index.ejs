@@ -1,0 +1,50 @@
+<!-- Main Page-->
+
+<%- include partials/header.ejs %>
+
+<%- include partials/mainnav.ejs %>  
+
+<%- include partials/maincontent.ejs %>
+
+<main class="container">
+
+    <div class="row">
+        <div class="col-md-offset-1 col-md-8">
+            
+            <% if(typeof displayName == 'string' && displayName) { %>
+            <a href="/survey/create" class="btn btn-primary" role = "button">
+            <i class="fas-fa-plus-circle"></i>Create Your Survey</a><br>
+            <% } else { %>
+                <h2>Log In To Create Your Own Survey</h2>
+            <% } %>            
+
+    <br>
+    
+    <table class="surveyTable">
+      <thead> 
+        <tr class="thead-dark">
+          <th scope="col">#</th>
+          <th scope="col">Surveys</th>
+          <th scope="col">Created by</th>
+          
+        </tr>
+      </thead>
+    <tbody>
+
+      <% for(let count = 0; count < SurveyList.length; count++) { %>
+        <tr id="tableRows">
+          <td scope="row"><%= count+1 %></td>  
+          <td class="titleCol"><a href='/survey' class="title"><%= SurveyList[count].surveyTitle %></a></td>
+          <td><%= SurveyList[count].createdBy %></td>
+     
+        </tr>
+      <% } %>
+    </table>
+    </div>
+  </div>
+
+    </main>
+
+<%- include partials/bottomnav.ejs %>
+
+<%- include partials/footer.ejs %>

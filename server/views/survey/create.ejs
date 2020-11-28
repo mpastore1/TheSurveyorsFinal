@@ -1,0 +1,252 @@
+<%- include ../partials/header.ejs %>
+<%- include ../partials/mainnav.ejs %>
+
+<!-- Add Content-->
+
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><% title %></h1>
+
+
+            <form class="form" method="POST">
+                <div class="form-group">
+                  <label for="surveyTitleTextField">Enter Title of Survey</label>
+                  <input type="text" class="form-control" id="surveyTitleTextField" 
+                  placeholder="Enter Survey's Name" name="surveyTitle">
+                </div>
+
+                <div class="form-group">
+                  <label for="createdBy">Please enter your name</label>
+                  <input type="text" class="form-control" id="createdBy" 
+                  placeholder="Enter Your Name" name="createdBy">
+                </div>
+                
+                <div class="form-group">
+                  <label for="question1TextField">Enter Question 1</label>
+                  <input type="text" class="form-control" id="question1TextField" 
+                  placeholder="Enter Question 1" name="question1">
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" 
+                    name="q1option" id="exampleradios1" 
+                    value="q1option1">
+                    <input type="text" class="form-control" id="option1TextField" 
+                  placeholder="Enter Option 1" name="q1option1">
+                    <label class="form-check-label" for="exampleradios1">
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" 
+                    name="q1option" id="exampleradios2" 
+                    value="q1option2">
+                    <input type="text" class="form-control" id="option1TextField" 
+                  placeholder="Enter Option 2" name="q1option2">
+                    <label class="form-check-label" for="exampleradios2">
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" 
+                    name="q1option" id="exampleradios3" 
+                    value="q1option3">
+                    <input type="text" class="form-control" id="option3TextField" 
+                  placeholder="Enter Option 3" name="q1option3">
+                    <label class="form-check-label" for="exampleradios3">
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" 
+                    name="q1option" id="exampleradios2" 
+                    value="q1option4">
+                    <input type="text" class="form-control" id="option1TextField" 
+                  placeholder="Enter Option 4" name="q1option4">
+                    <label class="form-check-label" for="exampleradios4">
+                    </label>
+                </div> 
+
+
+                <div class="form-group">
+                  <label for="question1TextField">Enter Question 2</label>
+                  <input type="text" class="form-control" id="question1TextField" 
+                  placeholder="Enter Question 2" name="question2">
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" 
+                    name="q2option" id="exampleradios1" 
+                    value="q2option1">
+                    <input type="text" class="form-control" id="option1TextField" 
+                  placeholder="Enter Option 1" name="q2option1">
+                    <label class="form-check-label" for="exampleradios1">
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" 
+                    name="q2option" id="exampleradios2" 
+                    value="q2option2">
+                    <input type="text" class="form-control" id="option1TextField" 
+                  placeholder="Enter Option 2" name="q2option2">
+                    <label class="form-check-label" for="exampleradios2">
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" 
+                    name="q2option" id="exampleradios3" 
+                    value="q2option3">
+                    <input type="text" class="form-control" id="option3TextField" 
+                  placeholder="Enter Option 3" name="q2option3">
+                    <label class="form-check-label" for="exampleradios3">
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" 
+                    name="q2option" id="exampleradios2" 
+                    value="q2option4">
+                    <input type="text" class="form-control" id="option1TextField" 
+                  placeholder="Enter Option 4" name="q2option4">
+                    <label class="form-check-label" for="exampleradios4">
+                    </label>
+                </div> 
+
+
+                <div class="form-group">
+                  <label for="question1TextField">Enter Question 3</label>
+                  <input type="text" class="form-control" id="question1TextField" 
+                  placeholder="Enter Question 3" name="question3">
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" 
+                    name="q3option" id="exampleradios1" 
+                    value="q3option1">
+                    <input type="text" class="form-control" id="option1TextField" 
+                  placeholder="Enter Option 1" name="q3option1">
+                    <label class="form-check-label" for="exampleradios1">
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" 
+                    name="q3option" id="exampleradios2" 
+                    value="q3option2">
+                    <input type="text" class="form-control" id="option1TextField" 
+                  placeholder="Enter Option 2" name="q3option2">
+                    <label class="form-check-label" for="exampleradios2">
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" 
+                    name="q3option" id="exampleradios3" 
+                    value="q3option3">
+                    <input type="text" class="form-control" id="option3TextField" 
+                  placeholder="Enter Option 3" name="q3option3">
+                    <label class="form-check-label" for="exampleradios3">
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" 
+                    name="q3option" id="exampleradios2" 
+                    value="q3option4">
+                    <input type="text" class="form-control" id="option1TextField" 
+                  placeholder="Enter Option 4" name="q3option4">
+                    <label class="form-check-label" for="exampleradios4">
+                    </label>
+                </div> 
+
+                <div class="form-group">
+                  <label for="question1TextField">Enter Question 4</label>
+                  <input type="text" class="form-control" id="question1TextField" 
+                  placeholder="Enter Question 4" name="question4">
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" 
+                    name="q4option" id="exampleradios1" 
+                    value="q4option1">
+                    <input type="text" class="form-control" id="option1TextField" 
+                  placeholder="Enter Option 1" name="q4option1">
+                    <label class="form-check-label" for="exampleradios1">
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" 
+                    name="q4option" id="exampleradios2" 
+                    value="q4option2">
+                    <input type="text" class="form-control" id="option1TextField" 
+                  placeholder="Enter Option 2" name="q4option2">
+                    <label class="form-check-label" for="exampleradios2">
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" 
+                    name="q4option" id="exampleradios3" 
+                    value="q4option3">
+                    <input type="text" class="form-control" id="option3TextField" 
+                  placeholder="Enter Option 3" name="q4option3">
+                    <label class="form-check-label" for="exampleradios3">
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" 
+                    name="q4option" id="exampleradios2" 
+                    value="q4option4">
+                    <input type="text" class="form-control" id="option1TextField" 
+                  placeholder="Enter Option 4" name="q4option4">
+                    <label class="form-check-label" for="exampleradios4">
+                    </label>
+                </div> 
+
+                <div class="form-group">
+                  <label for="question1TextField">Enter Question 5</label>
+                  <input type="text" class="form-control" id="question1TextField" 
+                  placeholder="Enter Question 5" name="question5">
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" 
+                    name="q5option" id="exampleradios1" 
+                    value="q5option1">
+                    <input type="text" class="form-control" id="option1TextField" 
+                  placeholder="Enter Option 1" name="q5option1">
+                    <label class="form-check-label" for="exampleradios1">
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" 
+                    name="q5option" id="exampleradios2" 
+                    value="q5option2">
+                    <input type="text" class="form-control" id="option1TextField" 
+                  placeholder="Enter Option 2" name="q5option2">
+                    <label class="form-check-label" for="exampleradios2">
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" 
+                    name="q5option" id="exampleradios3" 
+                    value="q5option3">
+                    <input type="text" class="form-control" id="option3TextField" 
+                  placeholder="Enter Option 3" name="q5option3">
+                    <label class="form-check-label" for="exampleradios3">
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" 
+                    name="q5option" id="exampleradios2" 
+                    value="q5option4">
+                    <input type="text" class="form-control" id="option1TextField" 
+                  placeholder="Enter Option 4" name="q5option4">
+                    <label class="form-check-label" for="exampleradios4">
+                    </label>
+                </div> 
+
+
+                <button class="btn btn-primary" type ="submit">
+                    <i class="far fa-edit"> Generate Survey</i>
+                </button>
+    
+                <a href="/" class="btn btn-warning"><i class="fas fa-undo"></i>Cancel</a>
+              </form>
+
+
+        </div>
+    </div>
+</div>
+
+<%- include ../partials/bottomnav.ejs %>
+
+<%- include ../partials/footer.ejs %>
