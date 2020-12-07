@@ -19,17 +19,33 @@ function requireAuth(req,res, next)
     next();
 }
 
+function requireAuth(req,res, next)
+{
+    //to check if the user is same
+    if(!req.isAuthenticated())
+    {
+        return res.redirect('/login')
+    }
+    next();
+}
+
 /* Get Route for our Book List Page */
 
 router.get('/', surveyController.displaySurvey);
 
+//Get Route for Results Page
+router.get('/results', requireAuth, surveyController.displayResults);
 
 //Get Route For Add Page - Create Application
-  
+
+
 router.get('/create', requireAuth, surveyController.displayCreatePage);
 
 //Post Route for processing
 router.post('/create', requireAuth, surveyController.displayProcessCreatePage);
+
+// Get Route to display a Single page
+router.get('/asurvey/:id', surveyController.displayAPage);
 
 // Get Route for Edit Page - Update Operations
 

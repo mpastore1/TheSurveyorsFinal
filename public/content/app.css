@@ -1,8 +1,14 @@
 /*Custom Css goes here*/
 
+/*main page starts*/
+
+/*main page ends*/
+
+
 body {
 padding-bottom: 100px;
-}
+background-color: #BCE3F0;
+}  
 div.row {
     margin: auto;
     width: 85%; 
@@ -11,14 +17,16 @@ div.row {
 /*Survey Table starts*/
 .surveyTable {
     width: 100%;
-    border: none;
+    border: solid 2px;
+    border-color: black;
+    border-radius: 10px;
     border-collapse:separate; 
 }
-tr:hover {color:white;background-color:#db2f2f;}
-thead .thead-dark{background-color:#F7DAE6; padding: 10px 10px;}
-thead .thead-dark:hover{background-color:#db2f2f;}
-tr:nth-child(even) {background-color: #F7DAE6;}
-tr:nth-child(even):hover{color:white;background-color:#db2f2f;}
+tr:hover {color:white;background-color:#5FAAB8;}
+thead .thead-dark{background-color:#91DBE2; padding: 10px 10px;}
+thead .thead-dark:hover{background-color:#5FAAB8;}
+tr:nth-child(even) {background-color: #91DBE2;}
+tr:nth-child(even):hover{color:white;background-color:#5FAAB8;}
 
 #tableRows .title {
     display: inline-block;
@@ -48,12 +56,22 @@ color: white;
   transition: 0.3s;
   padding: 20px;
   border-radius: 10px;
+  background-color: #E9ECEC;
 }
 .card:hover {
     box-shadow: 0 14px 24px 0 rgba(117, 39, 39, 0.2);
   }
 /*Card for Registeration and Login ends*/
 
+/*jumbotron*/
+.jumbotron {
+    background-color: #BCE3F0 ;
+    height: 150px;
+    font-family: 'Brush Script MT', cursive;
+}
 
-
-
+/* create form starts*/
+.form-control{
+    background-color: #E9ECEC;
+}
+/* create form ends*/

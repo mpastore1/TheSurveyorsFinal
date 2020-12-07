@@ -1,194 +1,188 @@
 <%- include ../partials/header.ejs %>
+
 <%- include ../partials/mainnav.ejs %>
 
 <main class="container">
 
     <div class="row">
-        <div class="col-md-offset-1 col-md-10">
-            <h1><%= title %></h1><hr>
-
-
-            <% for(let count = 0; count < SurveyList.length; count++) { %>
+        <div class="col-md-offset-1 col-md-10"><br><br>
             <form class="card">
 
                 <div class="form-group">
-                    <label for="surveyTitleTextField"><b><%= SurveyList[count].surveyTitle %></b></label>
+                    <label for="surveyTitleTextField"><b><%= survey.surveyTitle %></b></label>
                 </div>
                 <div class="form-group">
-                    <label for="surveyTitleTextField">Created By : <%= SurveyList[count].createdBy %></label>
+                    <label for="surveyTitleTextField">Created By : <%= survey.createdBy %></label>
                 </div>
                 <div class="form-group">
-                    <label for="question1TextField"><%= SurveyList[count].question1 %></label>
+                    <label for="question1TextField"><%= survey.question1 %></label>
                 </div>
-                <div class="form-check">
+                <div class="form-check"> 
                 <label position='left' class="form-check-label" for='exampleradios1'>
                     <input class="form-check-input" type="radio" name="q1option" value = "q1option1" id="exampleradios1">                
-                    <%= SurveyList[count].q1option1 %>
+                    <%= survey.q1option1 %>
                     </label>
                 </div>
                 <div class="form-check">
                  <label name="q2option" class="form-check-label" for='exampleradios2'>
                     <input class="form-check-input" type="radio" name="q1option" id="exampleradios2" value = "q1option2" >
-                    <%= SurveyList[count].q1option2 %>
+                    <%= survey.q1option2 %>
                     </label>
                 </div>
                 <div class="form-check">
                 <label class="form-check-label" for='exampleradios3'>
                     <input class="form-check-input" type="radio" name="q1option" id="exampleradios3" value="q1option3">
-                    <%= SurveyList[count].q1option3 %>
+                    <%= survey.q1option3 %>
                     </label>
                 </div>
                 <div class="form-check">
                 <label class="form-check-label" for="exampleradios4">
                     <input class="form-check-input" type="radio" name="q1option" id="exampleradios4" value="q1option4">
-                    <%= SurveyList[count].q1option4 %>
+                    <%= survey.q1option4 %>
                     </label>
                 </div>
                 <br>
                 <div class="form-group">
-                    <label for="question1TextField"><%= SurveyList[count].question2 %></label>
+                    <label for="question1TextField"><%= survey.question2 %></label>
                 </div>
                 <div class="form-check">
                  <label class="form-check-label" for='exampleradios5'>
                     <input class="form-check-input" type="radio" name="q2option" id="exampleradios5" value="q2option1" check>
-                   <%= SurveyList[count].q2option1 %>
+                   <%= survey.q2option1 %>
                     </label>
                 </div>
                 <div class="form-check">
                 <label class="form-check-label">
                     <input class="form-check-input" type="radio" name="q2option" id="exampleradios6" value="q2option2">
-                    <%= SurveyList[count].q2option2 %>
+                    <%= survey.q2option2 %>
                     </label>
                 </div>
                 <div class="form-check">
                 <label class="form-check-label">
                     <input class="form-check-input" type="radio" name="q2option" id="exampleradios7" value="q2option3">
-                    <%= SurveyList[count].q2option3 %>
+                    <%= survey.q2option3 %>
                     </label>
                 </div>
                 <div class="form-check">
                  <label class="form-check-label">
                     <input class="form-check-input" type="radio" name="q2option" id="exampleradios8" value="q2option2">
-                   <%= SurveyList[count].q2option4 %>
+                   <%= survey.q2option4 %>
                     </label>
                 </div>
 
                 <br>
                 <div class="form-group">
-                    <label for="question1TextField"><%= SurveyList[count].question3 %></label>
+                    <label for="question1TextField"><%= survey.question3 %></label>
                 </div>
                 <div class="form-check">
                  <label class="form-check-label">
                     <input class="form-check-input" type="radio" name="q3option" id="exampleradios9" value="q3option1">
-                   <%= SurveyList[count].q3option1 %>
+                   <%= survey.q3option1 %>
                     </label>
                 </div>
                 <div class="form-check">
                 <label class="form-check-label">
                     <input class="form-check-input" type="radio" name="q3option" id="exampleradios10" value="q3option2">
-                    <%= SurveyList[count].q3option2 %>
+                    <%= survey.q3option2 %>
                     </label>
                 </div>
                 <div class="form-check">
                 <label class="form-check-label">
                     <input class="form-check-input" type="radio" name="q3option" id="exampleradios11" value="q3option3">
-                    <%= SurveyList[count].q3option3 %>
+                    <%= survey.q3option3 %>
                     </label>
                 </div>
                 <div class="form-check">
                 <label class="form-check-label">
                     <input class="form-check-input" type="radio" name="q3option" id="exampleradios12" value="q3option4">
-                    <%= SurveyList[count].q3option4 %>
+                    <%= survey.q3option4 %>
                     </label>
                 </div>
 
                 <br>
                 <div class="form-group">
-                    <label for="question1TextField"><%= SurveyList[count].question4 %></label>
+                    <label for="question1TextField"><%= survey.question4 %></label>
                 </div>
                 <div class="form-check">
                  <label class="form-check-label">
                     <input class="form-check-input" type="radio" name="q4option" id="exampleradios13" value="q4option1">
-                   <%= SurveyList[count].q4option1 %>
+                   <%= survey.q4option1 %>
                     </label>
                 </div>
                 <div class="form-check">
                  <label class="form-check-label">
                     <input class="form-check-input" type="radio" name="q4option" id="exampleradios14" value="q4option2">
-                   <%= SurveyList[count].q4option2 %>
+                   <%= survey.q4option2 %>
                     </label>
                 </div>
                 <div class="form-check">
                 <label class="form-check-label">
                     <input class="form-check-input" type="radio" name="q4option" id="exampleradios15" value="q4option3">
-                    <%= SurveyList[count].q4option3 %>
+                    <%= survey.q4option3 %>
                     </label>
                 </div>
                 <div class="form-check">
                  <label class="form-check-label">
                     <input class="form-check-input" type="radio" name="q4option" id="exampleradios16" value="q4option4">
-                   <%= SurveyList[count].q4option4 %>
+                   <%= survey.q4option4 %>
                     </label>
                 </div>
 
                 <br>
                 <div class="form-group">
-                    <label for="question1TextField"><%= SurveyList[count].question5 %></label>
+                    <label for="question1TextField"><%= survey.question5 %></label>
                 </div>
                 <div class="form-check">
                 <label class="form-check-label">
                     <input class="form-check-input" type="radio" name="q5option" id="exampleradios17" value="q5option1">
-                    <%= SurveyList[count].q5option1 %>
+                    <%= survey.q5option1 %>
                     </label>
                 </div>
                 <div class="form-check">
                 <label class="form-check-label">
                     <input class="form-check-input" type="radio" name="q5option" id="exampleradios18" value="q5option2">
-                    <%= SurveyList[count].q5option2 %>
+                    <%= survey.q5option2 %>
                     </label>
                 </div>
                 <div class="form-check">
                 <label class="form-check-label">
                     <input class="form-check-input" type="radio" name="q5option" id="exampleradios19" value="q5option3">
-                    <%= SurveyList[count].q5option3 %>
+                    <%= survey.q5option3 %>
                     </label>
                 </div>
                 <div class="form-check">
                     <label class="form-check-label">
                     <input class="form-check-input" type="radio" name="q5option" id="exampleradios20" value="q5option4">
-                    <%= SurveyList[count].q5option4 %>
+                    <%= survey.q5option4 %>
                     </label>
                 </div>
                
                 
                  
                 <br> 
+                 
                 
                 <br><section>
-                <button class="btn btn-primary" type="button"  onclick="displayRadioValue()">
-                    <i>Submit</i>
+                <button class="btn btn-primary" type="button" onclick="displayRadioValue()">
+                    <i class="fas fa-paper-plane">Submit</i>
                 </button>
-
+                
+                <a href="/home" class="btn btn-primary"><i class="fas fa-undo-alt"></i> Back</a>
+                
                <div id='value'></div>
  
 
-                <% if(displayName == SurveyList[count].displayName) { %>
-                
+                <% if(displayName == survey.displayName) { %>
                 <br>
-            <a href="/survey/edit/<%= SurveyList[count]._id %>" class="btn btn-primary">Edit</a>
-            <a href="/survey/delete/<%= SurveyList[count]._id %>" class="btn btn-danger">Delete</a>
+            <a href="/survey/edit/<%= survey._id %>" class="btn btn-primary">Edit</a>
+            <a href="/survey/delete/<%= survey._id %>" class="btn btn-danger">Delete</a>
             <a href="/survey/results" class="btn btn-success">See Your Results</a>
             <br>
             <% } %>
             </section>
             <hr>
-            </form>           
-            <br><br>
-            <% } %>
-
-            <br>      
-
-        </div>
+            </form> 
+            </div>
 
     </div>
      

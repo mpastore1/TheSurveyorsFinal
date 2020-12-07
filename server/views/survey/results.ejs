@@ -1,0 +1,76 @@
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/mainnav.ejs %>
+
+<div class="container">
+    <h3>Show Results</h3>
+    <button class="btn btn-primary" type="button"  onclick="displayNumbers()">
+    Display average
+    </button> 
+
+    <% for(let count = 0; count < SurveyList.length; count++) { %>
+
+<% if(displayName == SurveyList[count].displayName) { %>
+<br>
+ 
+             <label for="question1TextField"><%= SurveyList[count].question1 %></label>
+   <p> <%= SurveyList[count].q1option1 %> :  <i  id="result0"></i></p>
+    
+    <p> <%= SurveyList[count].q1option2 %> :  <i  id="result1"></i></p>   
+   
+    <p> <%= SurveyList[count].q1option3 %> :  <i  id="result2"></i></p>   
+   
+    <p> <%= SurveyList[count].q1option4 %> :  <i  id="result3"></i></p>    
+    <br>
+     <label for="question1TextField"><%= SurveyList[count].question2 %></label>
+        <p> <%= SurveyList[count].q1option1 %> :  <i  id="result4"></i></p>
+    
+    <p> <%= SurveyList[count].q1option2 %> :  <i  id="result5"></i></p>   
+   
+    <p> <%= SurveyList[count].q1option3 %> :  <i  id="result6"></i></p>   
+   
+    <p> <%= SurveyList[count].q1option4 %> :  <i  id="result7"></i></p> 
+    <br>
+
+     <label for="question1TextField"><%= SurveyList[count].question3 %></label>
+     <p> <%= SurveyList[count].q3option1 %> :  <i  id="result8"></i></p>
+    
+    <p> <%= SurveyList[count].q3option2 %> :  <i  id="result9"></i></p>   
+   
+    <p> <%= SurveyList[count].q3option3 %> :  <i  id="result10"></i></p>   
+   
+    <p> <%= SurveyList[count].q3option4 %> :  <i  id="result11"></i></p> 
+    <br>
+    <label for="question1TextField"><%= SurveyList[count].question4 %></label>
+    <p> <%= SurveyList[count].q4option1 %> :  <i  id="result12"></i></p>
+    
+    <p> <%= SurveyList[count].q4option2 %> :  <i  id="result13"></i></p>   
+   
+    <p> <%= SurveyList[count].q4option3 %> :  <i  id="result14"></i></p>   
+   
+    <p> <%= SurveyList[count].q4option4 %> :  <i  id="result15"></i></p> 
+    <br>
+
+     <label for="question1TextField"><%= SurveyList[count].question5 %></label>
+     <p> <%= SurveyList[count].q4option1 %> :  <i  id="result16"></i></p>
+    
+    <p> <%= SurveyList[count].q4option2 %> :  <i  id="result17"></i></p>   
+   
+    <p> <%= SurveyList[count].q4option3 %> :  <i  id="result18"></i></p>   
+   
+    <p> <%= SurveyList[count].q4option4 %> :  <i  id="result19"></i></p> 
+    <br>
+
+ 
+ 
+ <% } %>
+
+
+
+    <% } %>
+
+
+
+<%- include ../partials/bottomnav.ejs %>
+
+<%- include ../partials/footer.ejs %>

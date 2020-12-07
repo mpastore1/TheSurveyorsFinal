@@ -9,16 +9,17 @@
 <main class="container">
 
     <div class="row">
-        <div class="col-md-offset-1 col-md-8">
+        <div class="col-md-offset-6 col-md-12">
             
             <% if(typeof displayName == 'string' && displayName) { %>
-            <a href="/survey/create" class="btn btn-primary" role = "button">
-            <i class="fas-fa-plus-circle"></i>Create Your Survey</a><br>
+            <a href="/survey/create" class="btn btn-primary" role = "button" style="background-color:#50ACB0; border: solid 3px;border-color:#368289; color:#051B1D">
+            <i class="fas-fa-plus-circle"></i><b>Create Your Survey</b></a><br>
             <% } else { %>
-                <h2>Log In To Create Your Own Survey</h2>
+                <h4>Log In To Create Your Own Survey</h4>
             <% } %>            
 
     <br>
+    <p class="lead" ><h5 style="text-align:center">Current Surveys</h5></p>
     
     <table class="surveyTable">
       <thead> 
@@ -34,7 +35,7 @@
       <% for(let count = 0; count < SurveyList.length; count++) { %>
         <tr id="tableRows">
           <td scope="row"><%= count+1 %></td>  
-          <td class="titleCol"><a href='/survey' class="title"><%= SurveyList[count].surveyTitle %></a></td>
+          <td class="titleCol"><a href="/survey/asurvey/<%= SurveyList[count]._id %>" class="title"><%= SurveyList[count].surveyTitle %></a></td>
           <td><%= SurveyList[count].createdBy %></td>
      
         </tr>
