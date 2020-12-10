@@ -2,6 +2,7 @@
 
 let createError = require('http-errors');
 let express = require('express');
+
 let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
@@ -13,8 +14,6 @@ let passport = require('passport');
 let passportLocal = require('passport-local');
 let localStrategy = passportLocal.Strategy;
 let flash = require('connect-flash');
-
-
 
 //database set up
 let mongoose = require('mongoose');
@@ -57,6 +56,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../../public')));
 app.use(express.static(path.join(__dirname, '../../node_modules')));
+
 
 //set up express session
 app.use(session({
@@ -106,5 +106,8 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+
+
 
 module.exports = app;

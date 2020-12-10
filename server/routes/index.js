@@ -26,4 +26,6 @@ router.post('/register', indexController.ProcessingRegisterPage);
 /* GET Processing Log OutPage */
 router.get('/logout', indexController.ProcessingLogOut);
 
+
+
 module.exports = router;

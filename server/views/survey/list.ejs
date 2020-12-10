@@ -7,8 +7,8 @@
         <div class="col-md-offset-1 col-md-10">
             <h1><%= title %></h1><hr>
 
-
             <% for(let count = 0; count < SurveyList.length; count++) { %>
+            <% if(displayName == SurveyList[count].displayName) { %>
             <form class="card">
 
                 <div class="form-group">
@@ -17,15 +17,20 @@
                 <div class="form-group">
                     <label for="surveyTitleTextField">Created By : <%= SurveyList[count].createdBy %></label>
                 </div>
+                <% if(SurveyList[count].question1 != "" ) {%>
+                    
                 <div class="form-group">
                     <label for="question1TextField"><%= SurveyList[count].question1 %></label>
                 </div>
+                 
+              
                 <div class="form-check">
                 <label position='left' class="form-check-label" for='exampleradios1'>
                     <input class="form-check-input" type="radio" name="q1option" value = "q1option1" id="exampleradios1">                
                     <%= SurveyList[count].q1option1 %>
                     </label>
                 </div>
+               
                 <div class="form-check">
                  <label name="q2option" class="form-check-label" for='exampleradios2'>
                     <input class="form-check-input" type="radio" name="q1option" id="exampleradios2" value = "q1option2" >
@@ -45,6 +50,9 @@
                     </label>
                 </div>
                 <br>
+                <%  } %>
+
+                 <% if(SurveyList[count].question2 != '' || SurveyList[count].question2 != null) {%>
                 <div class="form-group">
                     <label for="question1TextField"><%= SurveyList[count].question2 %></label>
                 </div>
@@ -72,7 +80,9 @@
                    <%= SurveyList[count].q2option4 %>
                     </label>
                 </div>
+                <%  } %>
 
+                <% if(SurveyList[count].question3 != "" ) {%>
                 <br>
                 <div class="form-group">
                     <label for="question1TextField"><%= SurveyList[count].question3 %></label>
@@ -101,7 +111,9 @@
                     <%= SurveyList[count].q3option4 %>
                     </label>
                 </div>
+                <%  } %>
 
+                <% if(SurveyList[count].question4 != "" ) {%>
                 <br>
                 <div class="form-group">
                     <label for="question1TextField"><%= SurveyList[count].question4 %></label>
@@ -130,7 +142,9 @@
                    <%= SurveyList[count].q4option4 %>
                     </label>
                 </div>
+                <%  } %>
 
+                <% if(SurveyList[count].question5 != "" ) {%>
                 <br>
                 <div class="form-group">
                     <label for="question1TextField"><%= SurveyList[count].question5 %></label>
@@ -159,8 +173,7 @@
                     <%= SurveyList[count].q5option4 %>
                     </label>
                 </div>
-               
-                
+               <%  } %>
                  
                 <br> 
                 
@@ -170,22 +183,16 @@
                 </button>
 
                <div id='value'></div>
- 
-
-                <% if(displayName == SurveyList[count].displayName) { %>
                 
                 <br>
             <a href="/survey/edit/<%= SurveyList[count]._id %>" class="btn btn-primary">Edit</a>
             <a href="/survey/delete/<%= SurveyList[count]._id %>" class="btn btn-danger">Delete</a>
-            <a href="/survey/results" class="btn btn-success">See Your Results</a>
-            <br>
+            <a href="/survey/results/<%= SurveyList[count]._id %>" class="btn btn-success">See Your Results</a>
             <% } %>
             </section>
-            <hr>
             </form>           
-            <br><br>
+            <br>
             <% } %>
-
             <br>      
 
         </div>

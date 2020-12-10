@@ -7,6 +7,9 @@
 
 //IIFE -- Immeadiately Invoked Function Expression
 
+
+
+
 (function() {
    function Start()
    {
@@ -91,16 +94,18 @@ function displayRadioValue() {
     
 
     }
-
+   
     function displayNumbers(){
-      
+        
         var element = document.getElementsByTagName('P'); 
+            
         for(i = 0 ; i < element.length; i++){     
-               
             document.getElementById("result"+i).innerHTML = Math.floor((Math.random() * 50) + 1).toString()+"%"
-            // document.getElementById("result2").innerHTML = Math.floor((Math.random() * 100) + 1).toString()+"%"
-            // document.getElementById("result3").innerHTML = Math.floor((Math.random() * 100) + 1).toString()+"%"
-            // document.getElementById("result4").innerHTML = Math.floor((Math.random() * 100) + 1).toString()+"%"
+           
 
         }
+        
     }
+
+    
+   

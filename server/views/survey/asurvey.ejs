@@ -14,6 +14,8 @@
                 <div class="form-group">
                     <label for="surveyTitleTextField">Created By : <%= survey.createdBy %></label>
                 </div>
+                
+                 <% if(survey.question1.length != 0 ) {%>
                 <div class="form-group">
                     <label for="question1TextField"><%= survey.question1 %></label>
                 </div>
@@ -42,6 +44,8 @@
                     </label>
                 </div>
                 <br>
+                <%  } %>
+                 <% if(survey.question2.length != 0 ) {%>
                 <div class="form-group">
                     <label for="question1TextField"><%= survey.question2 %></label>
                 </div>
@@ -69,7 +73,8 @@
                    <%= survey.q2option4 %>
                     </label>
                 </div>
-
+                <%  } %>
+                 <% if(survey.question3.length != 0 ) {%>
                 <br>
                 <div class="form-group">
                     <label for="question1TextField"><%= survey.question3 %></label>
@@ -98,7 +103,8 @@
                     <%= survey.q3option4 %>
                     </label>
                 </div>
-
+                <%  } %>
+                 <% if(survey.question4.length != 0 ) {%>
                 <br>
                 <div class="form-group">
                     <label for="question1TextField"><%= survey.question4 %></label>
@@ -127,7 +133,8 @@
                    <%= survey.q4option4 %>
                     </label>
                 </div>
-
+                <%  } %>
+                 <% if(survey.question5.length != 0 ) {%>
                 <br>
                 <div class="form-group">
                     <label for="question1TextField"><%= survey.question5 %></label>
@@ -156,8 +163,8 @@
                     <%= survey.q5option4 %>
                     </label>
                 </div>
-               
-                
+               <%  } %>
+                 
                  
                 <br> 
                  
@@ -176,7 +183,7 @@
                 <br>
             <a href="/survey/edit/<%= survey._id %>" class="btn btn-primary">Edit</a>
             <a href="/survey/delete/<%= survey._id %>" class="btn btn-danger">Delete</a>
-            <a href="/survey/results" class="btn btn-success">See Your Results</a>
+            <a href="/survey/results/<%= survey._id %>" class="btn btn-success">See Your Results</a>
             <br>
             <% } %>
             </section>

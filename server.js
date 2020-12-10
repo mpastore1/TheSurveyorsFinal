@@ -3,7 +3,7 @@
 /**
  * Module dependencies.
  */
-
+let PDF = require('express-pdf');
 let app = require('./server/config/app');
 let debug = require('debug')('assign1:server');
 let http = require('http');
@@ -77,6 +77,9 @@ function onError(error) {
   }
 }
 
+
+
+
 /**
  * Event listener for HTTP server "listening" event.
  */
@@ -88,3 +91,27 @@ function onListening() {
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
 }
+
+
+
+app.use(PDF); // or you can app.use(require('express-pdf'));
+ 
+app.use('/pdfFromHTML', function(req, res){
+    res.pdfFromHTML({
+        filename: 'generated.pdf',
+        html: path.resolve(__dirname, './template.html'),
+        
+    });
+});
+ 
+app.use('/pdfFromHTMLString', function(req, res){
+    res.pdfFromHTML({
+        filename: 'generated.pdf',
+        htmlContent: '<html><body>ASDF</body></html>',
+        
+    });
+});
+ 
+app.use('/pdf', function(req, res){
+    res.pdf(path.resolve(__dirname, './original.pdf'));
+})

@@ -19,6 +19,7 @@ function requireAuth(req,res, next)
     next();
 }
 
+
 function requireAuth(req,res, next)
 {
     //to check if the user is same
@@ -33,16 +34,14 @@ function requireAuth(req,res, next)
 
 router.get('/', surveyController.displaySurvey);
 
-//Get Route for Results Page
-router.get('/results', requireAuth, surveyController.displayResults);
-
 //Get Route For Add Page - Create Application
-
-
 router.get('/create', requireAuth, surveyController.displayCreatePage);
 
 //Post Route for processing
 router.post('/create', requireAuth, surveyController.displayProcessCreatePage);
+
+//Get Route for Results Page
+router.get('/results/:id', requireAuth, surveyController.displayResults);
 
 // Get Route to display a Single page
 router.get('/asurvey/:id', surveyController.displayAPage);

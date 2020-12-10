@@ -18,7 +18,7 @@ module.exports.displaySurvey = (req, res, next) => {
         else {    
             res.render('survey/list', 
             {title: 'Surveys', 
-            SurveyList: surveyList, displayName: req.user ? req.user.displayName : ''});
+             SurveyList: surveyList, displayName: req.user ? req.user.displayName : ''});
 
 
 
@@ -29,18 +29,20 @@ module.exports.displaySurvey = (req, res, next) => {
 }
 
 module.exports.displayResults = (req, res, next) => {
-    Survey.find((err, surveyList) => {
-        if (err)
-        {
-            return console.error(err);
-        }
-        else {    
-            res.render('survey/results', 
-            {title: 'Results', SurveyList: surveyList, displayName: req.user ? req.user.displayName : ''});
-        }
+    let id = req.params.id;
     
+    Survey.findById(id, (err, surveyToShow) => {
+    if(err){
+        console.log(err)
+        res.end(err);
+    }
+    else{
+        res.render('survey/results', 
+        {title: 'Results',Survey: surveyToShow, displayName: req.user ? req.user.displayName : ''})
+    }
     });
 }
+
 
 module.exports.displayAPage = (req, res, next) => {
     let id = req.params.id;
@@ -52,7 +54,7 @@ module.exports.displayAPage = (req, res, next) => {
     }
     else{
         res.render('survey/asurvey', 
-        {title: 'A Survey', survey: surveyToShow, displayName: req.user ? req.user.displayName : ''})
+        {title: 'A Survey',survey: surveyToShow, displayName: req.user ? req.user.displayName : ''})
     }
     });
 }
