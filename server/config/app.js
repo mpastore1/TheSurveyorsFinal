@@ -3,9 +3,11 @@
 let createError = require('http-errors');
 let express = require('express');
 
+ 
 let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
+
 
 //modules for Aunthentication
 
@@ -106,6 +108,11 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+// doc.pipe(fs.createWriteStream('public/assets/images/YourWork.pdf'))
+// doc.text('HELLO HOW ARE YOU');
+// doc.end();
+
+
 
 
 

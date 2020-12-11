@@ -19,6 +19,7 @@
     "express": "^4.16.4",
     "express-pdf": "^1.2.2",
     "express-session": "^1.17.1",
+    "html2pdf.js": "^0.9.2",
     "http-errors": "~1.6.3",
     "jquery": "^3.5.1",
     "mongoose": "^5.10.9",

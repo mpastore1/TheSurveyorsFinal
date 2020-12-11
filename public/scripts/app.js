@@ -3,16 +3,20 @@
     Student Id: 301064568 
     Date: October 25, 2020 */
 
+
+
 //const { event } = require("jquery");
 
 //IIFE -- Immeadiately Invoked Function Expression
 
 
 
-
 (function() {
+
    function Start()
    {
+   
+  
        console.log("App Started...");
 
        let deleteButtons = document.querySelectorAll('.btn-danger')
@@ -68,6 +72,8 @@
 
 })();
 
+
+
 function displayRadioValue() { 
     
     document.getElementById("result").innerHTML = ""; 
@@ -98,14 +104,18 @@ function displayRadioValue() {
     function displayNumbers(){
         
         var element = document.getElementsByTagName('P'); 
-            
+           
         for(i = 0 ; i < element.length; i++){     
-            document.getElementById("result"+i).innerHTML = Math.floor((Math.random() * 50) + 1).toString()+"%"
+            document.getElementById("result"+i).innerHTML = Math.floor((Math.random() * 50) + 1).toString()+"%";
            
 
         }
-        
+       
+       
     }
 
-    
-   
+     
+ 
+     
+
+

@@ -4,13 +4,14 @@
 
 
 
+
 <div class="container">
     <h3>Show Results</h3>
     <button class="btn btn-primary" type="button"  onclick="displayNumbers()">
     Display average
     </button> 
 
-<form method='POST' action='pdfMake\pdf'>
+<form >
 <% if(displayName == Survey.displayName ) { %>
 <br>
 
@@ -77,6 +78,14 @@
  </form>
     <a href="/home" class="btn btn-primary"><i class="fas fa-undo-alt"></i> Back</a>
 
+
+
+
+
+
+
 <%- include ../partials/bottomnav.ejs %>
 
 <%- include ../partials/footer.ejs %>
+
+
